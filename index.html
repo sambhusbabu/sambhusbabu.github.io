@@ -36,7 +36,6 @@
   <!-- Primary Meta Tags -->
 
 
-
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -62,8 +61,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
 
+  <!-- Dark Theme Css -->
+  <link id="dark-theme-style" href="assets/css/dark-theme.css" rel="stylesheet" disabled>
+
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link id="light-theme-style" href="assets/css/style.css" rel="stylesheet">
+
 
   <!-- bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -111,6 +114,13 @@
               class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li>
+          <a id="theme-toggle" class="nav-link" style="background:none;border:none;cursor:pointer;"
+            aria-label="Toggle theme">
+            <i id="theme-icon" class="bx bx-moon"></i>
+            <span id="theme-label" style="margin-left:5px;">Dark</span>
+        </a>
+        </li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -717,6 +727,68 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- ...existing code... -->
+  <script>
+      (function () {
+        const lightTheme = document.getElementById('light-theme-style');
+        const darkTheme = document.getElementById('dark-theme-style');
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        const label = document.getElementById('theme-label');
+
+        // Detect system preference
+        function getSystemTheme() {
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        // Apply theme
+        function setTheme(theme) {
+          if (theme === 'dark') {
+            darkTheme.disabled = false;
+            lightTheme.disabled = false;
+            icon.className = 'bx bx-sun';
+            label.textContent = 'Light';
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            darkTheme.disabled = true;
+            lightTheme.disabled = false;
+            icon.className = 'bx bx-moon';
+            label.textContent = 'Dark';
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        }
+
+        // Load theme from localStorage or system
+        function loadTheme() {
+          const saved = localStorage.getItem('theme');
+          if (saved === 'dark' || saved === 'light') {
+            setTheme(saved);
+          } else {
+            // setTheme("light");
+            setTheme(getSystemTheme());
+          }
+        }
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+          if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+        });
+
+        // Toggle theme on button click
+        toggleBtn.addEventListener('click', function () {
+          const current = !darkTheme.disabled ? 'dark' : 'light';
+          const next = current === 'dark' ? 'light' : 'dark';
+          console.log(current);
+          setTheme(next);
+          localStorage.setItem('theme', next);
+        });
+
+        // Initialize
+        loadTheme();
+      })();
+  </script>
+  <!-- ...existing code... -->
 
 </body>
 

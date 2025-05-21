@@ -1,0 +1,256 @@
+/* --- DARK THEME OVERRIDES --- */
+
+/* General */
+body {
+  background: #23272a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Links */
+a, a:visited {
+  color: #4fc3f7 !important;
+}
+a:hover {
+  color: #81d4fa !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.section-title h2,
+.resume .resume-title,
+.resume .resume-item h4,
+.portfolio-details .portfolio-info h3 {
+  color: #fff !important;
+}
+
+/* Section backgrounds */
+section,
+.section-bg,
+#main,
+#footer,
+.card-counter,
+.resume .resume-item,
+.portfolio .portfolio-wrap,
+.services .icon-box,
+.contact .info,
+.contact .php-email-form,
+.facts .count-box {
+  background: #23272a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Section titles and text */
+.section-title p,
+.resume .resume-item p,
+.resume .resume-item ul li,
+.portfolio-details .portfolio-info ul li,
+.services .icon-box p,
+.contact .info p,
+#footer p {
+  color: #b0b0b0 !important;
+}
+
+/* Navigation */
+.nav-menu {
+ padding: 0;
+}
+.nav-menu a span {
+  /* background: #23272a !important; */
+  color: #e0e0e0 !important;
+  border-radius: 50px;
+}
+.nav-menu a {
+    background: #292929 !important;
+}
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu li:hover > a {
+  background: #333 !important;
+  color: #fff !important;
+}
+
+/* Mobile nav toggle */
+.mobile-nav-toggle {
+  background: #23272a !important;
+  color: #fff !important;
+}
+
+/* Hero section */
+#hero {
+  background: url("../img/hero-bg.jpg") top right no-repeat, #4c5459 !important;
+  background-size: cover;
+  position: relative;
+}
+#hero:before {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+#hero h1, #hero p, #hero .social-links a{
+  color: #fff !important;
+}
+#hero .social-links a:hover {
+  color: #4fc3f7 !important;
+}
+#hero p span {
+  color: #4fc3f7 !important;
+  letter-spacing: 1px;
+}
+/* Facts section */
+.facts .count-box {
+  background: #23272a !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+}
+.facts .count-box i {
+  background: #4fc3f7 !important;
+  color: #181a1b !important;
+}
+.facts .count-box span {
+  color: #fff !important;
+}
+
+/* Skills section */
+.skills .progress-bar-wrap {
+  background: #181a1b !important;
+}
+.skills .progress-bar {
+  background-color: #4fc3f7 !important;
+}
+.skills .progress .skill {
+  color: #e0e0e0 !important;
+}
+
+/* Resume section */
+.resume .resume-item {
+  background: #23272a !important;
+  border-left: 2px solid #4fc3f7 !important;
+}
+.resume .resume-item h5 {
+  background: #333 !important;
+  color: #4fc3f7 !important;
+}
+.resume .resume-item::before {
+  background: #23272a !important;
+  border: 2px solid #4fc3f7 !important;
+}
+
+/* Portfolio section */
+.portfolio .portfolio-wrap {
+  background: #23272a !important;
+}
+.portfolio .portfolio-wrap .portfolio-info {
+  background: rgba(24, 26, 27, 0.95) !important;
+  color: #fff !important;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #4fc3f7 !important;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #81d4fa !important;
+}
+
+/* Services section */
+.services .icon-box {
+  background: #23272a !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+
+/* .services .icon-box .icon i {
+  color: #4fc3f7 !important;
+} */
+
+.services .icon-box h4 a {
+  color: #fff !important;
+}
+.services .icon-box:hover {
+  border-color: #4fc3f7 !important;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Contact section */
+.contact .info {
+  background: #23272a !important;
+  color: #fff !important;
+}
+.contact .info i {
+  background: #23272a !important;
+  color: #4fc3f7 !important;
+}
+.contact .php-email-form {
+  background: #23272a !important;
+  color: #fff !important;
+}
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  background: #181a1b !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+}
+.contact .php-email-form button[type="submit"] {
+  background: #4fc3f7 !important;
+  color: #181a1b !important;
+}
+.contact .php-email-form button[type="submit"]:hover {
+  background: #81d4fa !important;
+}
+
+/* Footer */
+#footer {
+  background: #23272a !important;
+  color: #b0b0b0 !important;
+}
+#footer h3 {
+  color: #fff !important;
+}
+#footer .social-links a {
+  background: #181a1b !important;
+  color: #4fc3f7 !important;
+}
+#footer .social-links a:hover {
+  background: #4fc3f7 !important;
+  color: #181a1b !important;
+}
+
+/* Back to top button */
+.back-to-top {
+  background: #4fc3f7 !important;
+  color: #181a1b !important;
+}
+.back-to-top i {
+  color: #181a1b !important;
+}
+
+/* Preloader */
+#preloader {
+  background: #181a1b !important;
+}
+#preloader:before {
+  border: 6px solid #4fc3f7 !important;
+  border-top-color: #23272a !important;
+  border-bottom-color: #23272a !important;
+}
+
+/* Card counter */
+.card-counter {
+  background-color: #23272a !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+}
+.card-counter.primary,
+.card-counter.danger,
+.card-counter.success,
+.card-counter.info {
+  background-color: #23272a !important;
+  color: #4fc3f7 !important;
+}
+.card-counter i {
+  color: #4fc3f7 !important;
+}
+
+/* Scrollbar for dark mode */
+::-webkit-scrollbar {
+  background: #23272a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4fc3f7;
+}
